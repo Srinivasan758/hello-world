@@ -29,8 +29,7 @@
     </site>
   </distributionManagement>
 
-  <build>
-    <plugin-prefix>:<goal>
+  <build>    
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -39,7 +38,11 @@
           <target>1.6</target>
         </configuration>
       </plugin>
-
+     <plugin>
+         <defaultGoal>install</defaultGoal>
+        <!-- Source directory configuration -->
+        <sourceDirectory>src</sourceDirectory>
+     </plugin>
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
         <configuration>
